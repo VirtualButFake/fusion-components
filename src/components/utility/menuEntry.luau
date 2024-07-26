@@ -26,11 +26,7 @@ type slots = {
 	Left: ((useColor: theme.useColorFunction, option: option) -> fusion.CanBeState<{ any }>)?,
 	Center: ((useColor: theme.useColorFunction, option: option) -> fusion.CanBeState<{ any }>)?,
 	Right: ((useColor: theme.useColorFunction, option: option) -> fusion.CanBeState<{ any }>)?,
-	Wrapper: ((
-		useColor: theme.useColorFunction,
-		option: option,
-		component: Frame
-	) -> fusion.CanBeState<{ any }>)?,
+	Wrapper: ((useColor: theme.useColorFunction, option: option, component: Frame) -> fusion.CanBeState<{ any }>)?,
 }
 
 export type option = {
@@ -166,7 +162,7 @@ local function menuEntry(props: props): Frame?
 								ClipsDescendants = true,
 								Size = props.Option.LabelFullSize and UDim2.new(1, 0, 1, 0) or UDim2.new(),
 								TextSize = Computed(function()
-									if typeof(use(props.Option.Label)) == "string" then
+									if not use(props.Option.Label) or typeof(use(props.Option.Label)) == "string" then
 										return 16
 									end
 

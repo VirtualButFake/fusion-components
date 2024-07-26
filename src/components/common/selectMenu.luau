@@ -436,16 +436,22 @@ local function selectMenu(props: props): Frame
 								return
 							end, Clean),
 							ForPairs(shownResults, function(index, option)
+                                if option == nil or use(option) == nil then 
+                                    return
+                                end
+
+                                local usedOption = use(option)
+
 								local optionProperties = {
-									Label = option.Label or option.Id,
-									Icon = option.Icon,
+									Label = usedOption.Label or usedOption.Id,
+									Icon = usedOption.Icon,
 									LabelFullSize = true,
 									Slots = {
-										Left = option.Slots and option.Slots.Left,
-										Center = option.Slots and option.Slots.Center,
+										Left = usedOption.Slots and usedOption.Slots.Left,
+										Center = usedOption.Slots and usedOption.Slots.Center,
 										Right = function(useSlotColor)
 											return Computed(function()
-												if table.find(use(selectedOptions), option.Id) then
+												if table.find(use(selectedOptions), usedOption.Id) then
 													return baseIcon({
 														Icon = props.SelectedIcon or "check",
 														Color = useSlotColor("Text", true),
@@ -458,7 +464,7 @@ local function selectMenu(props: props): Frame
 									},
 								}
 
-								for idx, value in option do
+								for idx, value in usedOption do
 									if idx == "Slots" then
 										for slotIdx, slotValue in value do
 											optionProperties.Slots[slotIdx] = slotValue
@@ -474,7 +480,7 @@ local function selectMenu(props: props): Frame
 									Option = optionProperties,
 									FallbackColor = "gray",
 									Selected = Computed(function()
-										return table.find(use(selectedOptions), option.Id)
+										return table.find(use(selectedOptions), usedOption.Id)
 									end),
 									Interactable = Computed(function()
 										return use(isVisible) and not use(props.Disabled)
@@ -485,7 +491,7 @@ local function selectMenu(props: props): Frame
 										end
 
 										if props.OnOptionClicked then
-											props.OnOptionClicked(option.Id, isVisible)
+											props.OnOptionClicked(usedOption.Id, isVisible)
 										end
 									end,
 									AppearanceOverride = props.EntryAppearanceOverride,

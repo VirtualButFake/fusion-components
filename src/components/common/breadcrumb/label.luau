@@ -28,7 +28,7 @@ type props = {
 	AppearanceOverride: fusion.CanBeState<theme.optionalColorTable>?,
 	Label: label,
 	Selected: fusion.Computed<boolean>,
-	[a]: any,
+	[any]: any,
 }
 
 local function breadcrumbLabel(props: props): TextButton
