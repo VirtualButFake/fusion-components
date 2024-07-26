@@ -1,0 +1,15 @@
+{
+	"name": "FusionComponents",
+	"emitLegacyScripts": false,
+	"tree": {
+		"$className": "DataModel",
+		"ReplicatedStorage": {
+			"Packages": {
+				"$path": "packages",
+				"FusionComponents": {
+					"$path": "build"
+				}
+			}
+		}
+	}
+}

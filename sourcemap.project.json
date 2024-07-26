@@ -1,0 +1,9 @@
+{
+	"name": "FusionComponents",
+	"tree": {
+		"$path": "packages",
+		"FusionComponents": {
+			"$path": "src"
+		}
+	}
+}

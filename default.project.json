@@ -1,0 +1,7 @@
+{
+	"name": "FusionComponents",
+	"emitLegacyScripts": false,
+	"tree": {
+		"$path": "build"
+	}
+}
