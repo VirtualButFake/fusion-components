@@ -41,7 +41,7 @@ local function contextMenu(object: GuiObject, props: props): GuiObject
 		local isHovering = Value(false)
 		local isVisible = getState(props.Visible or false)
 		local resetPosition = getState(props.StateOutput and props.StateOutput.ResetPosition or false)
-		local isMenuVisible = Computed(function()
+		local canMenuBeVisible = Computed(function()
 			if props.Enabled == nil then
 				return true
 			end
@@ -63,7 +63,7 @@ local function contextMenu(object: GuiObject, props: props): GuiObject
 					return
 				end
 
-				if input.UserInputType == Enum.UserInputType.MouseButton2 and isMenuVisible:get() then
+				if input.UserInputType == Enum.UserInputType.MouseButton2 and canMenuBeVisible:get() then
 					if props.VisibleLogic == nil or props.VisibleLogic(true) then
 						if not isVisible:get() then
 							isVisible:set(true)
@@ -86,8 +86,8 @@ local function contextMenu(object: GuiObject, props: props): GuiObject
 					end
 				end
 			end),
-			Observer(isMenuVisible):onChange(function()
-				if not isMenuVisible:get() and isVisible:get() then
+			Observer(canMenuBeVisible):onChange(function()
+				if not canMenuBeVisible:get() and isVisible:get() then
 					isVisible:set(false)
 				end
 			end),
