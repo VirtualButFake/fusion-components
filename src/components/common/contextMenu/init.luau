@@ -18,7 +18,7 @@ type props = {
 	AppearanceOverride: fusion.CanBeState<theme.optionalColorTable>?,
 	Enabled: fusion.CanBeState<boolean>?,
 	Visible: fusion.Value<boolean>?,
-	EnabledLogic: ((toOpen: boolean) -> boolean)?,
+	VisibleLogic: ((toOpen: boolean) -> boolean)?,
 	Options: { { menu.option } },
 	-- internal use
 	Position: {
@@ -41,7 +41,7 @@ local function contextMenu(object: GuiObject, props: props): GuiObject
 		local isHovering = Value(false)
 		local isVisible = getState(props.Visible or false)
 		local resetPosition = getState(props.StateOutput and props.StateOutput.ResetPosition or false)
-		local isEnabled = Computed(function()
+		local isMenuVisible = Computed(function()
 			if props.Enabled == nil then
 				return true
 			end
@@ -49,7 +49,7 @@ local function contextMenu(object: GuiObject, props: props): GuiObject
 			local wouldBeEnabled = typeof(props.Enabled) == "table" and props.Enabled:get() or props.Enabled
 
 			if not wouldBeEnabled and isVisible:get() then
-				if props.EnabledLogic == nil or props.EnabledLogic(false) then
+				if props.VisibleLogic == nil or props.VisibleLogic(false) then
 					isVisible:set(false)
 				end
 			end
@@ -63,8 +63,8 @@ local function contextMenu(object: GuiObject, props: props): GuiObject
 					return
 				end
 
-				if input.UserInputType == Enum.UserInputType.MouseButton2 and isEnabled:get() then
-					if props.EnabledLogic == nil or props.EnabledLogic(true) then
+				if input.UserInputType == Enum.UserInputType.MouseButton2 and isMenuVisible:get() then
+					if props.VisibleLogic == nil or props.VisibleLogic(true) then
 						if not isVisible:get() then
 							isVisible:set(true)
 						else
@@ -81,13 +81,13 @@ local function contextMenu(object: GuiObject, props: props): GuiObject
 			end),
 			Observer(layer.state.mouseDown):onChange(function()
 				if layer.state.mouseDown:get() and isVisible:get() and not isHovering:get() then
-					if props.EnabledLogic == nil or props.EnabledLogic(false) then
+					if props.VisibleLogic == nil or props.VisibleLogic(false) then
 						isVisible:set(false)
 					end
 				end
 			end),
-			Observer(isEnabled):onChange(function()
-				if not isEnabled:get() and isVisible:get() then
+			Observer(isMenuVisible):onChange(function()
+				if not isMenuVisible:get() and isVisible:get() then
 					isVisible:set(false)
 				end
 			end),
