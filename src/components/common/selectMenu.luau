@@ -182,8 +182,8 @@ local function selectMenu(props: props): Frame
 
 					if selectedOption then
 						for _, option in use(props.Options) do
-							if option.Id == selectedOption then
-								return option.Icon ~= nil
+							if use(option).Id == selectedOption then
+								return use(option).Icon ~= nil
 							end
 						end
 					end
@@ -198,10 +198,10 @@ local function selectMenu(props: props): Frame
 
 							if selectedOption then
 								for _, option in use(props.Options) do
-									if option.Id == selectedOption then
-										return option.Icon
+									if use(option).Id == selectedOption then
+										return use(option).Icon
 												and baseIcon({
-													Icon = option.Icon,
+													Icon = use(option).Icon,
 													Color = useColor("Text", true),
 												})
 											or nil
@@ -230,8 +230,8 @@ local function selectMenu(props: props): Frame
 					local selectedOptionList = {}
 
 					for _, option in use(props.Options) do
-						if table.find(use(selectedOptions), option.Id) then
-							table.insert(selectedOptionList, option.Label or option.Id)
+						if table.find(use(selectedOptions), use(option).Id) then
+							table.insert(selectedOptionList, use(option).Label or use(option).Id)
 						end
 					end
 
@@ -437,7 +437,7 @@ local function selectMenu(props: props): Frame
 							end, Clean),
 							ForPairs(shownResults, function(index, option)
                                 if option == nil or use(option) == nil then 
-                                    return
+                                    return index
                                 end
 
                                 local usedOption = use(option)

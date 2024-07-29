@@ -6,6 +6,7 @@ local New = fusion.New
 
 local Clean = fusion.cleanup
 local Computed = fusion.Computed
+local DoNothing = fusion.doNothing
 local ForPairs = fusion.ForPairs
 local Value = fusion.Value
 
@@ -122,7 +123,7 @@ local function tabs(props: props): Frame
 						local tab = use(props.Tabs)[selectedIndex:get()]
 
 						return tab and tab.Content or {}
-					end, Clean),
+					end, DoNothing),
 				},
 			}),
 		},
