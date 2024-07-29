@@ -27,7 +27,7 @@ type props = {
 	Text: string? | baseText.text?,
 	Visible: fusion.CanBeState<boolean>?,
 	DisableHoverBehaviour: boolean?,
-	Padding: fusion.CanBeState<number>?,
+	Padding: fusion.CanBeState<UDim>?,
 	Enabled: fusion.CanBeState<boolean>?,
 	Slots: {
 		Content: ((useColor: theme.useColorFunction) -> fusion.CanBeState<{ any }>)?,

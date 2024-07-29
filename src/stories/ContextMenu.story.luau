@@ -108,7 +108,7 @@ return {
 								Variant = "default",
 								FollowMouse = true,
 								Text = "Clicking this will delete the element",
-								Padding = 8,
+								Padding = UDim.new(0, 8),
 							})
 						end,
 					},
