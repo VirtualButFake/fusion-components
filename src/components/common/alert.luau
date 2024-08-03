@@ -74,25 +74,25 @@ local function alert(props: props): Frame
 								SortOrder = Enum.SortOrder.LayoutOrder,
 								VerticalAlignment = Enum.VerticalAlignment.Top,
 							}),
-							(props.Slots and props.Slots.LeadingContent or props.Icon) and New("Frame")({
-								Name = "LeadingContent",
-								AutomaticSize = Enum.AutomaticSize.XY,
-								BackgroundTransparency = 1,
-								[Children] = {
-									props.Slots
-											and props.Slots.LeadingContent
-											and props.Slots.LeadingContent(useColor)
-										or baseIcon({
-											Icon = {
-												Name = props.Icon,
-												Size = 16,
-											},
-											Color = useColor("Title", true),
-											Size = UDim2.new(0, 16, 0, 16),
-										})
-										or nil,
-								},
-							}) or nil,
+							(props.Slots and props.Slots.LeadingContent or props.Icon)
+									and New("Frame")({
+										Name = "LeadingContent",
+										AutomaticSize = Enum.AutomaticSize.XY,
+										BackgroundTransparency = 1,
+										[Children] = {
+											props.Slots and props.Slots.LeadingContent and props.Slots.LeadingContent(
+												useColor
+											) or baseIcon({
+												Icon = {
+													Name = props.Icon,
+													Size = 16,
+												},
+												Color = useColor("Title", true),
+												Size = UDim2.new(0, 16, 0, 16),
+											}) or nil,
+										},
+									})
+								or nil,
 							New("Frame")({
 								Name = "TextContainer",
 								AutomaticSize = Enum.AutomaticSize.XY,
