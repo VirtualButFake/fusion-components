@@ -1,21 +1,21 @@
 [package]
 name = "virtualbutfake/fusion-components"
 description = "A collection of Fusion components"
-version = "0.1.7"
+version = "0.1.8"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 include = [
-    "build",
-    "build/components",
-    "build/components/**",
-    "build/theme",
-    "build/theme/**",
-    "build/init.luau",
+    "dist",
+    "dist/components",
+    "dist/components/**",
+    "dist/theme",
+    "dist/theme/**",
+    "dist/init.luau",
     "LICENSE.md",
     "wally.toml",
     "default.project.json",
 ]
-exclude = ["*", "build.rbxl", "build/stories"]
+exclude = ["*", "build.rbxm", "dist/stories"]
 [dependencies]
 fusion = "elttob/fusion@0.2.0"
 fusionUtils = "virtualbutfake/fusion-utils@0.1.0"
