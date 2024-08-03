@@ -173,7 +173,7 @@ local function selectMenu(props: props): Frame
 				AutomaticSize = Enum.AutomaticSize.XY,
 				BackgroundTransparency = 1,
 				LayoutOrder = 0,
-				Visible = Computed(function()
+				Visible = props.Slots and props.Slots.LeftInput ~= nil or Computed(function()
 					if use(props.Multiple) then
 						return false
 					end
@@ -182,8 +182,8 @@ local function selectMenu(props: props): Frame
 
 					if selectedOption then
 						for _, option in use(props.Options) do
-							if use(option).Id == selectedOption then
-								return use(option).Icon ~= nil
+							if option.Id == selectedOption then
+								return option.Icon ~= nil
 							end
 						end
 					end
