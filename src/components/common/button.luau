@@ -35,8 +35,8 @@ type props = {
 	OnMouseChanged: ((isDown: boolean) -> nil)?,
 	OnClick: (() -> nil)?,
 	OnHover: ((isHovering: boolean) -> nil)?,
-    OnMouseButton2Changed: ((isDown: boolean) -> nil)?,
-    OnMouseButton2Clicked: (() -> nil)?,
+	OnMouseButton2Changed: ((isDown: boolean) -> nil)?,
+	OnMouseButton2Clicked: (() -> nil)?,
 	DisablePressHandler: boolean?,
 	DisableHoverHandler: boolean?,
 	[any]: any,
@@ -155,16 +155,16 @@ local function button(props: props): TextButton
 				props.OnMouseChanged(isPressed)
 			end
 		end,
-        OnMouseButton2Changed = function(isPressed)
-            if props.OnMouseButton2Changed then
-                props.OnMouseButton2Changed(isPressed)
-            end
-        end,
-        OnMouseButton2Clicked = function()
-            if props.OnMouseButton2Clicked then
-                props.OnMouseButton2Clicked()
-            end
-        end,
+		OnMouseButton2Changed = function(isPressed)
+			if props.OnMouseButton2Changed then
+				props.OnMouseButton2Changed(isPressed)
+			end
+		end,
+		OnMouseButton2Clicked = function()
+			if props.OnMouseButton2Clicked then
+				props.OnMouseButton2Clicked()
+			end
+		end,
 	})
 
 	return Hydrate(component)(propertyProvider.getPropsAndSpecialKeys(props, "TextButton")) :: TextButton

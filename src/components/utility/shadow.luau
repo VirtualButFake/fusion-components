@@ -207,8 +207,8 @@ local shadowData = {
 	},
 }
 
-for _, elevation in pairs(shadowData) do
-	for _, data in pairs(elevation) do
+for _, elevation in shadowData do
+	for _, data in elevation do
 		data.Size = UDim2.new(1, data.Blur, 1, data.Blur)
 		data.Position = UDim2.new(0.5, 0, 0.5, 0) + (data.Offset or UDim2.new())
 		data.ImageTransparency = 1 - data.Opacity
@@ -224,7 +224,7 @@ local function tableToReactiveTable(table: { [string]: any }): {
 }?
 	local reactiveTable = {}
 
-	for key, value in pairs(table) do
+	for key, value in table do
 		reactiveTable[key] = Value(value)
 	end
 

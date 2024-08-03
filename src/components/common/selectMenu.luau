@@ -135,7 +135,7 @@ local function selectMenu(props: props): Frame
 				if #newSelectedOptions ~= #currentSelectedOptions then
 					hasDifference = true
 				else
-					for _, option in ipairs(newSelectedOptions) do
+					for _, option in newSelectedOptions do
 						if not table.find(currentSelectedOptions, option) then
 							hasDifference = true
 							break
@@ -436,11 +436,11 @@ local function selectMenu(props: props): Frame
 								return
 							end, Clean),
 							ForPairs(shownResults, function(index, option)
-                                if option == nil or use(option) == nil then 
-                                    return index
-                                end
+								if option == nil or use(option) == nil then
+									return index
+								end
 
-                                local usedOption = use(option)
+								local usedOption = use(option)
 
 								local optionProperties = {
 									Label = usedOption.Label or usedOption.Id,

@@ -13,9 +13,8 @@ type props = {
 	AppearanceOverride: fusion.CanBeState<theme.optionalColorTable>?,
 	Placement: placementPopover.placement?,
 	Visible: fusion.CanBeState<boolean>,
-    Padding: fusion.CanBeState<UDim>?,
-	Content: fusion.CanBeState<{ any }>
-		| ((useColor: theme.useColorFunction) -> fusion.CanBeState<{ any }>),
+	Padding: fusion.CanBeState<UDim>?,
+	Content: fusion.CanBeState<{ any }> | ((useColor: theme.useColorFunction) -> fusion.CanBeState<{ any }>),
 	PositionAnimation: boolean?,
 	Wrapper: ((popoverFrame: GuiObject) -> GuiObject)?,
 }

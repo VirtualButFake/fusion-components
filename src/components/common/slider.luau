@@ -193,12 +193,15 @@ local function slider(props: props): Frame
 						CornerRadius = UDim.new(1, 0),
 						Size = UDim2.new(1, 0, 1, 0),
 					}),
-					props.Slots and props.Slots.BarFill and props.Slots.BarFill(useColor, Computed(function()  
-                        local min = use(props.Min)
-                        local max = use(props.Max)
+					props.Slots and props.Slots.BarFill and props.Slots.BarFill(
+						useColor,
+						Computed(function()
+							local min = use(props.Min)
+							local max = use(props.Max)
 
-                        return math.clamp((sliderValue:get() - min) / (max - min), 0, 1)
-                    end)) or baseFrame({
+							return math.clamp((sliderValue:get() - min) / (max - min), 0, 1)
+						end)
+					) or baseFrame({
 						Name = "BarHighlight",
 						Appearance = useColor("Highlight", true),
 						CornerRadius = UDim.new(1, 0),

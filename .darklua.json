@@ -1,5 +1,10 @@
 {
 	"rules": [
+		{
+			"rule": "inject_global_value",
+			"identifier": "__DEV__",
+			"env": "RBLX_DEV"
+		},
 		"compute_expression",
 		"filter_after_early_return",
 		"remove_empty_do",
@@ -13,13 +18,13 @@
 				"sources": {
 					"@components": "src/components",
 					"@packages": "packages",
-                    "@src": "src"
+					"@src": "src"
 				}
 			},
 			"target": {
 				"name": "roblox",
 				"rojo_sourcemap": "sourcemap.json",
-				"indexing_style": "property"
+				"indexing_style": "wait_for_child"
 			}
 		}
 	]

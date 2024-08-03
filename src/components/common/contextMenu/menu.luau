@@ -192,11 +192,11 @@ local function contextMenu(props: props): Frame
 								BackgroundTransparency = 1,
 								Content = {
 									ForPairs(optionList, function(optIndex: number, option: option)
-										if use(option) == nil then 
-                                            return
+										if use(option) == nil then
+											return
 										end
-                                        
-                                        local extendedState = {
+
+										local extendedState = {
 											cleanup = {},
 										}
 

@@ -26,8 +26,7 @@ export type props = {
 	AppearanceOverride: fusion.CanBeState<theme.optionalColorTable>?,
 	ParentComponent: GuiObject,
 	Position: fusion.CanBeState<UDim2>?,
-	Content: fusion.CanBeState<{ any }>?
-		| ((useColor: theme.useColorFunction) -> fusion.CanBeState<{ any }>)?,
+	Content: fusion.CanBeState<{ any }>? | ((useColor: theme.useColorFunction) -> fusion.CanBeState<{ any }>)?,
 	Visible: fusion.CanBeState<boolean>,
 	PopoverSize: fusion.Value<Vector2>?,
 	Appearance: fusion.CanBeState<theme.color>?,

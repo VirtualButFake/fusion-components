@@ -35,9 +35,9 @@ type props = {
 	}?,
 	Content: fusion.CanBeState<{ Instance }>?,
 	OnClick: (() -> nil)?,
-    OnMouseButton2Click: (() -> nil)?,
+	OnMouseButton2Click: (() -> nil)?,
 	OnMouseButton1Changed: ((isDown: boolean) -> nil)?,
-    OnMouseButton2Changed: ((isDown: boolean) -> nil)?,
+	OnMouseButton2Changed: ((isDown: boolean) -> nil)?,
 	OnHover: ((hoverState: boolean) -> nil)?,
 	DisableHoverLighting: fusion.CanBeState<boolean>?,
 	[any]: any,
@@ -86,11 +86,11 @@ local function button(props: props)
 		end
 	end
 
-    local function setRightPressed(state)
-        if props.OnMouseButton2Changed then
-            props.OnMouseButton2Changed(state)
-        end
-    end
+	local function setRightPressed(state)
+		if props.OnMouseButton2Changed then
+			props.OnMouseButton2Changed(state)
+		end
+	end
 
 	local componentRef = Value()
 	local mousePosition = Value(Vector2.new())
@@ -100,7 +100,7 @@ local function button(props: props)
 		BackgroundTransparency = 1,
 		Text = "",
 		[Event("MouseButton1Click")] = props.OnClick,
-        [Event("MouseButton2Click")] = props.OnMouseButton2Click,
+		[Event("MouseButton2Click")] = props.OnMouseButton2Click,
 		[Out("AbsoluteSize")] = targetSize,
 		[Event("MouseButton1Down")] = function()
 			setLeftPressed(true)
@@ -108,19 +108,19 @@ local function button(props: props)
 		[Event("MouseButton1Up")] = function()
 			setLeftPressed(false)
 		end,
-        [Event("MouseButton2Down")] = function()
-            setRightPressed(true)
-        end,
-        [Event("MouseButton2Up")] = function()
-            setRightPressed(false)
-        end,
+		[Event("MouseButton2Down")] = function()
+			setRightPressed(true)
+		end,
+		[Event("MouseButton2Up")] = function()
+			setRightPressed(false)
+		end,
 		[Event("MouseEnter")] = function()
 			setHover(true)
 		end,
 		[Event("MouseLeave")] = function()
 			setHover(false)
 			setLeftPressed(false)
-            setRightPressed(false)
+			setRightPressed(false)
 		end,
 		[Event("InputChanged")] = function(input: InputObject)
 			if input.UserInputType == Enum.UserInputType.MouseMovement then
