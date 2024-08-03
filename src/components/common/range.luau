@@ -251,7 +251,7 @@ local function range(props: props): Frame
 									if largestPercentage < 0.999 then
 										table.insert(
 											keyPoints,
-											NumberSequenceKeypoint.new(largestPercentage + 0.0001, 1)
+											NumberSequenceKeypoint.new(largestPercentage + 0.001, 1)
 										)
 									end
 

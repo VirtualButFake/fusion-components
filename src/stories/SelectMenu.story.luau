@@ -33,9 +33,9 @@ return {
 			},
 		})
 
-        local selectedOptions = Value({
-            "Value 1",
-        })
+		local selectedOptions = Value({
+			"Value 1",
+		})
 
 		local topFrame = New("Frame")({
 			BackgroundTransparency = 1,
@@ -56,18 +56,18 @@ return {
 
 						options:set(currentOptions)
 					end,
-                    OnOptionClicked = function(option)
-                        local currentSelectedOptions = table.clone(selectedOptions:get())
-                        local index = table.find(currentSelectedOptions, option)
+					OnOptionClicked = function(option)
+						local currentSelectedOptions = table.clone(selectedOptions:get())
+						local index = table.find(currentSelectedOptions, option)
 
-                        if index then
-                            table.remove(currentSelectedOptions, index)
-                        else
-                            table.insert(currentSelectedOptions, option)
-                        end
+						if index then
+							table.remove(currentSelectedOptions, index)
+						else
+							table.insert(currentSelectedOptions, option)
+						end
 
-                        selectedOptions:set(currentSelectedOptions)
-                    end,
+						selectedOptions:set(currentSelectedOptions)
+					end,
 					Position = UDim2.fromOffset(54, 54),
 					SelectedOptions = selectedOptions,
 					Size = UDim2.fromOffset(100, 20),

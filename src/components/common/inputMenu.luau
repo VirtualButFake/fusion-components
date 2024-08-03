@@ -132,24 +132,27 @@ local function inputMenu(props: props): Frame
 		end,
 		Slots = {
 			Left = props.Slots and props.Slots.Left and function(useColor)
-				return props.Slots.Left(useColor, Computed(function()
-                    local option
+				return props.Slots.Left(
+					useColor,
+					Computed(function()
+						local option
 
-                    for _, opt in pairs(use(shownResults)) do
-                        if opt.Id == selectedOption:get() then
-                            option = opt
-                            break
-                        end
-                    end
+						for _, opt in (use(shownResults)) do
+							if opt.Id == selectedOption:get() then
+								option = opt
+								break
+							end
+						end
 
-                    return option
-                end, Clean))
+						return option
+					end, Clean)
+				)
 			end or function(useColor)
 				return Computed(function()
 					if selectedOption:get() then
 						local option
 
-						for _, opt in pairs(use(shownResults)) do
+						for _, opt in (use(shownResults)) do
 							if opt.Id == selectedOption:get() then
 								option = opt
 								break

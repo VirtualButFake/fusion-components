@@ -70,7 +70,7 @@ local function modal(object: GuiObject, props: props): GuiObject
 							Padding = UDim.new(0, 0),
 							VerticalAlignment = Enum.VerticalAlignment.Center,
 						}),
-                        popoverFrame
+						popoverFrame,
 					},
 				})
 			end,

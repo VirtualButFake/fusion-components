@@ -14,7 +14,7 @@ return {
 		Disabled = false,
 	},
 	story = storyBase(function(parent: Frame, props)
-        local inputText = Value(props.Controls.Text)
+		local inputText = Value(props.Controls.Text)
 
 		local component = input({
 			Color = props.controls.Color,
@@ -31,7 +31,7 @@ return {
 			end,
 			OnFocusLost = function(text, enterPressed)
 				print("Focus lost:", text, enterPressed)
-                inputText:set(text)
+				inputText:set(text)
 			end,
 			Position = UDim2.fromOffset(4, 4),
 			Size = UDim2.fromOffset(100, 24),

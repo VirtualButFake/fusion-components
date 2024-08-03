@@ -1,9 +1,15 @@
 {
-	"name": "fusion-components",
-	"tree": {
-		"$path": "packages",
-		"FusionComponents": {
-			"$path": "src"
-		}
-	}
+    "name": "project-template",
+    "tree": {
+        "$className": "DataModel",
+        "ReplicatedStorage": {
+            "Packages": {
+                "$className": "Folder",
+                "{{ project_name }": {
+                    "$path": "src"
+                },
+                "$path": "packages"
+            }
+        }
+    }
 }

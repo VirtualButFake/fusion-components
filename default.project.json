@@ -1,7 +1,0 @@
-{
-	"name": "fusion-components",
-	"emitLegacyScripts": false,
-	"tree": {
-		"$path": "build"
-	}
-}
