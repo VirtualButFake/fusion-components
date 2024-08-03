@@ -1,15 +1,15 @@
 {
-    "name": "project-template",
-    "tree": {
-        "$className": "DataModel",
-        "ReplicatedStorage": {
-            "Packages": {
-                "$className": "Folder",
-                "project-template": {
-                    "$path": "dist"
-                },
-                "$path": "packages"
-            }
-        }
-    }
+	"name": "FusionComponents",
+	"tree": {
+		"$className": "DataModel",
+		"ReplicatedStorage": {
+			"Packages": {
+				"$className": "Folder",
+				"FusionComponents": {
+					"$path": "dist"
+				},
+				"$path": "packages"
+			}
+		}
+	}
 }

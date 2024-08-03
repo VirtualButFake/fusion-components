@@ -1,7 +1,7 @@
 [package]
 name = "virtualbutfake/fusion-components"
 description = "A collection of Fusion components"
-version = "0.1.8"
+version = "0.1.10"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 include = [
@@ -18,7 +18,7 @@ include = [
 exclude = ["*", "build.rbxm", "dist/stories"]
 [dependencies]
 fusion = "elttob/fusion@0.2.0"
-fusionUtils = "virtualbutfake/fusion-utils@0.1.0"
-tailwind = "virtualbutfake/tailwind@0.1.0"
-themeFramework = "virtualbutfake/theme-framework@0.1.0"
+fusionUtils = "virtualbutfake/fusion-utils@0.1.2"
+tailwind = "virtualbutfake/tailwind@0.1.1"
+themeFramework = "virtualbutfake/theme-framework@0.1.2"
 Lucide = "virtualbutfake/lucide-roblox@1.1.2"

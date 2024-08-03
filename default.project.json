@@ -1,7 +1,6 @@
 {
-    "name": "project-template",
-    "tree": {
-      "$path": "dist"
-    }
-  }
-  
+	"name": "FusionComponents",
+	"tree": {
+		"$path": "dist"
+	}
+}
