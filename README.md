@@ -25,7 +25,7 @@ A UI library containing 32 themed components for Fusion 0.2.
 
 FusionComponents is available on Wally [here](https://wally.run/package/virtualbutfake/fusion-components).
 
-An extensive guide on how to get started can be found in the [documentation](https://docs.tijne.net/fusioncomponents/getting-started)
+An extensive guide on how to get started can be found in the [documentation](https://docs.tijne.net/fusioncomponents/getting-started).
 
 ## Documentation
 
