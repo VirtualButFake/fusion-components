@@ -2,7 +2,7 @@
 
 # FusionComponents
 
-A UI library containing 31 themed components for Fusion 0.2.
+31 beautiful modern components for Fusion 0.2.
 
 [![License](https://img.shields.io/github/license/virtualbutfake/fusion-components?style=flat)](https://github.com/virtualbutfake/fusion-components/blob/master/LICENSE.md)
 [![CI](https://github.com/virtualbutfake/fusion-components/actions/workflows/ci.yaml/badge.svg)](https://github.com/virtualbutfake/fusion-components/actions)
