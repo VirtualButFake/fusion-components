@@ -4,7 +4,7 @@
 
 A UI library containing 32 themed components for Fusion 0.2.
 
-[![License](https://img.shields.io/github/license/virtualbutfake/fusion-components)](https://github.com/virtualbutfake/fusion-components/blob/master/LICENSE.md)
+[![License](https://img.shields.io/github/license/virtualbutfake/fusion-components?style=flat)](https://github.com/virtualbutfake/fusion-components/blob/master/LICENSE.md)
 [![CI](https://github.com/virtualbutfake/fusion-components/actions/workflows/ci.yaml/badge.svg)](https://github.com/virtualbutfake/fusion-components/actions)
 
 </div>
