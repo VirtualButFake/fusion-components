@@ -31,6 +31,8 @@ An extensive guide on how to get started can be found in the [documentation](htt
 
 The documentation for FusionComponents provides info on every component and its properties. It can be found [here](https://docs.tijne.net/fusioncomponents).
 
+The repository for the documentation can be found [here](https://github.com/virtualbutfake/fusion-components-docs). Because it hosts the documentation for multiple projects, it is a separate repository.
+
 ## Contributing
 
 Contributions are always welcomed. Code should follow Stylua and Selene formatting conventions. To contribute, fork this repository, make your changes, and create a pull request. Please make sure to test your changes before creating a pull request.
