@@ -1,1 +1,0 @@
-declare __DEV__: any

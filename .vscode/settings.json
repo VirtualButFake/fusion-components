@@ -8,9 +8,6 @@
         "editor.defaultFormatter": "JohnnyMorganz.stylua",
         "editor.formatOnSave": true
     },
-    "luau-lsp.types.definitionFiles": [
-        ".vscode/type_definitions.d.luau"
-    ],
     "luau-lsp.require.mode": "relativeToFile",
     "luau-lsp.require.directoryAliases": {
         "@components": "src/components",

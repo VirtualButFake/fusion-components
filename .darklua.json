@@ -1,10 +1,5 @@
 {
 	"rules": [
-		{
-			"rule": "inject_global_value",
-			"identifier": "__DEV__",
-			"env": "RBLX_DEV"
-		},
 		"compute_expression",
 		"filter_after_early_return",
 		"remove_empty_do",

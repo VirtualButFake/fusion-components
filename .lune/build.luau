@@ -25,9 +25,7 @@ local function recursiveCopy(src, dest)
 
 		if meta.kind == "file" then
 			fs.writeDir(dest)
-
-            local content = fs.readFile(path):gsub("__DEV__", "false")
-			fs.writeFile(`{dest}/{file}`, content)
+			fs.writeFile(`{dest}/{file}`, fs.readFile(path))
 		elseif meta.kind == "dir" then
 			recursiveCopy(path, `{dest}/{file}`)
 		end
