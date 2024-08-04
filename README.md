@@ -37,6 +37,22 @@ The repository for the documentation can be found [here](https://github.com/virt
 
 Contributions are always welcomed. Code should follow Stylua and Selene formatting conventions. To contribute, fork this repository, make your changes, and create a pull request. Please make sure to test your changes before creating a pull request.
 
+> [!IMPORTANT]  
+> This project currently suffers from the `thread 'main' has overflowed its stack` issue caused by full-moon.
+>
+> You can fix this by running `ulimit -s 16384` before running the build command on Linux, or by increasing the Darklua executable stack size on Windows. You can do this by installing Visual Studio and opening the `Developer Command Prompt for VS` and running `editbin /STACK:16777216 "C:\Users\<your user>\.aftman\tool-storage\seaofvoices\darklua\0.13.1\darklua.exe"`. While this is by no means a solution, overhauling the project to fix this (hopefully) temporary issue is not a priority at the moment.
+>
+> If you need help with this, feel free to ping me in the Roblox OSS Discord server.
+
+In order to test your changes, you can run the following commands:
+
+```bash
+aftman install
+lune run dev
+```
+
+This will start a Rojo server. You can test your changes through stories which you can run with [Flipbook](https://github.com/flipbook-labs/flipbook).
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/virtualbutfake/fusion-components/blob/main/LICENSE.md) file for details.
