@@ -23,24 +23,33 @@
 
 <details>
 <summary>Demo of a few components</summary>
+
 ### [Alert](https://docs.tijne.net/fusioncomponents/components/alert)
+
 ![Alert](public/alert_showcase.png)
 
 ### [Button](https://docs.tijne.net/fusioncomponents/components/button)
+
 ![Button](public/button_showcase.png)
 
 ### [Badge](https://docs.tijne.net/fusioncomponents/components/badge)
+
 ![Badge](public/badge_showcase.png)
 
 ### [Checkbox](https://docs.tijne.net/fusioncomponents/components/checkbox)
+
 ![Checkbox](public/checkbox_showcase.png)
 
 ### [Progress Bar](https://docs.tijne.net/fusioncomponents/components/progressbar)
-![Progress Bar](public/progressbar_showcase.gif)
+
+![Progress Bar](public/progressbar_showcase.mp4)
 
 ### [Slider](https://docs.tijne.net/fusioncomponents/components/slider)
-![Slider](public/slider_showcase.gif)
+
+![Slider](public/slider_showcase.mp4)
+
 </details>
+
 ## Getting Started
 
 FusionComponents is available on Wally [here](https://wally.run/package/virtualbutfake/fusion-components).
