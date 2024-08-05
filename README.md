@@ -25,29 +25,24 @@
 <summary>Demo of a few components</summary>
 
 ### [Alert](https://docs.tijne.net/fusioncomponents/components/alert)
-
 ![Alert](public/alert_showcase.png)
 
 ### [Button](https://docs.tijne.net/fusioncomponents/components/button)
-
 ![Button](public/button_showcase.png)
 
 ### [Badge](https://docs.tijne.net/fusioncomponents/components/badge)
-
 ![Badge](public/badge_showcase.png)
 
 ### [Checkbox](https://docs.tijne.net/fusioncomponents/components/checkbox)
-
 ![Checkbox](public/checkbox_showcase.png)
 
 ### [Progress Bar](https://docs.tijne.net/fusioncomponents/components/progressbar)
+https://github.com/user-attachments/assets/83b39c68-794b-4cd7-a4f4-079c9a43eda2
 
-![Progress Bar](public/progressbar_showcase.mp4)
+
 
 ### [Slider](https://docs.tijne.net/fusioncomponents/components/slider)
-
-![Slider](public/slider_showcase.mp4)
-
+https://github.com/user-attachments/assets/adae33d9-e23a-4b75-8fe0-2856ae1a9e72
 </details>
 
 ## Getting Started
