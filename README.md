@@ -21,6 +21,28 @@
 - Straightforward theming: Through ThemeFramework, colors, transparencies and shadows for any state can be customized with ease on any component.
 - Inspired by Nuxt UI, providing variants that can be used to change the appearance of a component to one of the predefined styles, without having to customize anything else.
 
+<details>
+    <summary>Demo of a few components</summary>
+
+    ### [Alert](https://docs.tijne.net/fusioncomponents/components/alert)
+    ![Alert](public/alert_showcase.png)
+
+    ### [Button](https://docs.tijne.net/fusioncomponents/components/button)
+    ![Button](public/button_showcase.png)
+
+    ### [Badge](https://docs.tijne.net/fusioncomponents/components/badge)
+    ![Badge](public/badge_showcase.png)
+
+    ### [Checkbox](https://docs.tijne.net/fusioncomponents/components/checkbox)
+    ![Checkbox](public/checkbox_showcase.png)
+
+    ### [Progress Bar](https://docs.tijne.net/fusioncomponents/components/progressbar)
+    ![Progress Bar](public/progressbar_showcase.gif)
+
+    ### [Slider](https://docs.tijne.net/fusioncomponents/components/slider)
+    ![Slider](public/slider_showcase.gif)
+</details>
+
 ## Getting Started
 
 FusionComponents is available on Wally [here](https://wally.run/package/virtualbutfake/fusion-components).
