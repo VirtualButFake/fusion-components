@@ -121,7 +121,16 @@ local function canvasFrame(props: props): GuiObject
 		end
 	end
 
-	onDestroy(container, { Observer(renderMode):onChange(updateContentType) })
+	onDestroy(container, {
+		Observer(renderMode):onChange(updateContentType),
+		function()
+			canvas:Destroy()
+			contentHolder:Destroy()
+			props.Shadow = nil
+
+			Clean(computedShadow)
+		end,
+	})
 	task.spawn(updateContentType)
 
 	return Hydrate(container)(propertyProvider.getPropsAndSpecialKeys(props, "Frame"))

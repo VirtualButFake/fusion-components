@@ -1,4 +1,4 @@
-local Studio = settings().Studio
+local Studio = pcall(settings) and settings().Studio or nil
 
 local themeFramework = require("@packages/themeFramework")
 local tailwind = require("@packages/tailwind")
@@ -30,7 +30,7 @@ end
 local theme = themeFramework.new(script.components, reloadTheme)
 
 local connections = {
-	Studio.ThemeChanged:Connect(function()
+	Studio and Studio.ThemeChanged:Connect(function()
 		theme:load(theme:build(Studio.Theme.Name))
 	end),
 	script.Destroying:Connect(function()
@@ -38,7 +38,7 @@ local connections = {
 	end),
 }
 
-theme:load(theme:build(Studio.Theme.Name))
+theme:load(theme:build(Studio and Studio.Theme.Name or "Dark"))
 
 local wasDestroyed = false
 

@@ -85,6 +85,7 @@ local index = {
 		shadow = utilityShadow,
 		storyBase = utilityStoryBase,
 	},
+	theme = require("@src/theme"),
 }
 
 return index
