@@ -78,7 +78,7 @@ local function tabElement(props: props): TextButton
 				Name = "TabButtonText",
 				Appearance = useColor("Text", true),
 				Text = props.Label,
-				FontFace = theme.global.font,
+				FontFace = use(theme.global.font),
 				Size = UDim2.fromScale(1, 1),
 				TextSize = 18,
 				TextTransparency = 0,

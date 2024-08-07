@@ -12,7 +12,7 @@ export type optionalColorTable = themeFramework.optionalColorTable
 export type useColorFunction = themeFramework.useColorFunction
 
 local globals = {
-	font = Font.fromEnum(Enum.Font.SourceSans),
+	font = Value(Font.fromEnum(Enum.Font.SourceSans)),
 	isDark = Value(false),
 	background = Value(Color3.fromRGB(255, 255, 255)),
 }
@@ -42,26 +42,30 @@ theme:load(theme:build(Studio and Studio.Theme.Name or "Dark"))
 
 local wasDestroyed = false
 
--- this is suboptimal, but types refused to work if i did it the other way around
-return setmetatable(theme, {
-	__index = function(_, key)
-		if key == "global" then
-			return globals
-		end
+return setmetatable({
+	global = globals,
+	destroy = function()
+        if wasDestroyed then
+            return
+        end
 
-		if key == "destroy" and not wasDestroyed then
-			return function()
-				wasDestroyed = true
+		wasDestroyed = true
 
-				Clean(theme, connections)
-				theme = nil
-			end
-		end
-
-		return themeFramework[key]
+		Clean(theme, connections)
+		theme = nil
 	end,
+    setFont = function(font: Font)
+        globals.font:set(font)
+    end,
+    setTheme = function(themeName: string)
+        theme:load(theme:build(themeName))
+    end
+}, {
+	__index = theme,
 }) :: themeFramework.themeFramework & {
 	destroy: () -> (),
+    setFont: (font: Font) -> (),
+    setTheme: (theme: string) -> (),
 	global: {
 		font: Font,
 		isDark: fusion.Value<boolean>,

@@ -36,7 +36,7 @@ local function text(props: props)
 			Label = Computed(function()
 				return use(props.Text)
 			end),
-			Font = theme.global.font,
+			Font = use(theme.global.font),
 			TextSize = 14,
 		} :: text
 

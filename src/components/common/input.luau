@@ -145,7 +145,7 @@ local function input(props: props): Frame
 						TextAppearance = useColor("Text", true),
 						PlaceholderAppearance = useColor("Placeholder", true),
 						BackgroundTransparency = 1,
-						FontFace = theme.global.font,
+						FontFace = use(theme.global.font),
 						Interactable = Computed(function()
 							return not use(props.Disabled)
 						end),

@@ -134,7 +134,7 @@ local function alert(props: props): Frame
 												Appearance = useColor("Description", true),
 												Text = props.Description,
 												AutomaticSize = Enum.AutomaticSize.XY,
-												FontFace = theme.global.font,
+												FontFace = use(theme.global.font),
 												TextSize = typeof(props.Description) == "string" and 14 or nil,
 												TextXAlignment = Enum.TextXAlignment.Left,
 												TextYAlignment = Enum.TextYAlignment.Top,
