@@ -57,6 +57,10 @@ The documentation for FusionComponents provides info on every component and its 
 
 The repository for the documentation can be found [here](https://github.com/virtualbutfake/fusion-components-docs). Because it hosts the documentation for multiple projects, it is a separate repository.
 
+## Changelog
+
+The changelog can be found [here](CHANGELOG.md).
+
 ## Contributing
 
 Contributions are always welcomed. Code should follow Stylua and Selene formatting conventions. To contribute, fork this repository, make your changes, and create a pull request. Please make sure to test your changes before creating a pull request.
