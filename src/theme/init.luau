@@ -45,27 +45,27 @@ local wasDestroyed = false
 return setmetatable({
 	global = globals,
 	destroy = function()
-        if wasDestroyed then
-            return
-        end
+		if wasDestroyed then
+			return
+		end
 
 		wasDestroyed = true
 
 		Clean(theme, connections)
 		theme = nil
 	end,
-    setFont = function(font: Font)
-        globals.font:set(font)
-    end,
-    setTheme = function(themeName: string)
-        theme:load(theme:build(themeName))
-    end
+	setFont = function(font: Font)
+		globals.font:set(font)
+	end,
+	setTheme = function(themeName: string)
+		theme:load(theme:build(themeName))
+	end,
 }, {
 	__index = theme,
 }) :: themeFramework.themeFramework & {
 	destroy: () -> (),
-    setFont: (font: Font) -> (),
-    setTheme: (theme: string) -> (),
+	setFont: (font: Font) -> (),
+	setTheme: (theme: string) -> (),
 	global: {
 		font: Font,
 		isDark: fusion.Value<boolean>,
