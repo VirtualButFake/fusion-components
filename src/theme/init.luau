@@ -54,20 +54,12 @@ return setmetatable({
 		Clean(theme, connections)
 		theme = nil
 	end,
-	setFont = function(font: Font)
-		globals.font:set(font)
-	end,
-	setTheme = function(themeName: string)
-		theme:load(theme:build(themeName))
-	end,
 }, {
 	__index = theme,
 }) :: themeFramework.themeFramework & {
 	destroy: () -> (),
-	setFont: (font: Font) -> (),
-	setTheme: (theme: string) -> (),
 	global: {
-		font: Font,
+		font: fusion.Value<Font>,
 		isDark: fusion.Value<boolean>,
 		background: fusion.Value<Color3>,
 	},
