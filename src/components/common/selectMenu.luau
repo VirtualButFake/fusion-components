@@ -268,7 +268,7 @@ local function selectMenu(props: props): Frame
 		},
 		DisableHoverLighting = true,
 		OnClick = function()
-			isVisible:set(not isVisible:get())
+			isVisible:set(not isVisible:get(false))
 		end,
 		OnHover = function(state)
 			isHovering:set(state)

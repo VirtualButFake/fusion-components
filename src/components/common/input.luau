@@ -204,8 +204,8 @@ local function input(props: props): Frame
 		},
 		DisableHoverLighting = true,
 		OnClick = function()
-			if textBox:get() and not use(props.Disabled) then
-				textBox:get():CaptureFocus()
+			if textBox:get(false) and not use(props.Disabled) then
+				textBox:get(false):CaptureFocus()
 			end
 		end,
 		OnHover = function(state)

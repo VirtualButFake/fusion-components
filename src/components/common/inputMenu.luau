@@ -192,7 +192,7 @@ local function inputMenu(props: props): Frame
 							return
 						end
 
-						isVisible:set(not isVisible:get())
+						isVisible:set(not isVisible:get(false))
 					end,
 					OnHover = function(isHovering)
 						blockMouseIcon:set(isHovering)

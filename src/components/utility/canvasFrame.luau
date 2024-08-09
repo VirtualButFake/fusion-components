@@ -23,7 +23,7 @@ type props = {
 	GroupTransparency: fusion.StateObject<number>,
 	Visible: fusion.CanBeState<boolean>?,
 	Children: fusion.CanBeState<{ any }>,
-	Shadow: theme.color?,
+	Shadow: fusion.CanBeState<theme.color>?,
 }
 
 local CANVAS_EPSILON = 0.00001

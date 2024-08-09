@@ -87,7 +87,7 @@ local function checkbox(props: props): TextButton
 			if props.OnClick then
 				props.OnClick(checkboxState)
 			else
-				checkboxState:set(not checkboxState:get())
+				checkboxState:set(not checkboxState:get(false))
 			end
 		end,
 		OnHover = function(state)

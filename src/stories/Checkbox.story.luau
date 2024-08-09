@@ -17,7 +17,7 @@ return {
 			Disabled = props.controls.Disabled,
 			State = CheckboxState,
 			OnClick = function()
-				CheckboxState:set(not CheckboxState:get())
+				CheckboxState:set(not CheckboxState:get(false))
 			end,
 			Position = UDim2.fromOffset(4, 4),
 		})

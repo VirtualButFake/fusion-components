@@ -1,3 +1,11 @@
+# 0.1.17
+Changes
+- Fixed type of `Shadow` on canvasFrame
+
+Fixes
+- Potential recursive state fixed
+
+
 # 0.1.16
 
 Changes
