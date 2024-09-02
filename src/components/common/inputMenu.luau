@@ -137,7 +137,7 @@ local function inputMenu(props: props): Frame
 					Computed(function()
 						local option
 
-						for _, opt in (use(shownResults)) do
+						for _, opt in use(shownResults) do
 							if opt.Id == selectedOption:get() then
 								option = opt
 								break
@@ -152,7 +152,7 @@ local function inputMenu(props: props): Frame
 					if selectedOption:get() then
 						local option
 
-						for _, opt in (use(shownResults)) do
+						for _, opt in use(shownResults) do
 							if opt.Id == selectedOption:get() then
 								option = opt
 								break

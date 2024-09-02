@@ -1,10 +1,18 @@
+# 0.1.18
+
+Fixes
+
+- Fix typo in `commonButton` that resulted in `MouseButton2Clicked` event not firing
+
 # 0.1.17
+
 Changes
+
 - Fixed type of `Shadow` on canvasFrame
 
 Fixes
-- Potential recursive state fixed
 
+- Potential recursive state fixed
 
 # 0.1.16
 

@@ -160,7 +160,7 @@ local function button(props: props): TextButton
 				props.OnMouseButton2Changed(isPressed)
 			end
 		end,
-		OnMouseButton2Clicked = function()
+		OnMouseButton2Click = function()
 			if props.OnMouseButton2Clicked then
 				props.OnMouseButton2Clicked()
 			end
