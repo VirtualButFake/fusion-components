@@ -1,0 +1,16 @@
+{
+	"aliases": {
+		"src": "./src",
+		"server": "./src/server",
+		"client": "./src/client",
+		"packages": "./packages",
+		"serverpackages": "./serverPackages"
+	},
+	"languageMode": "nonstrict",
+	"lintErrors": false,
+	"typeErrors": true,
+	"lint": {
+		"*": true,
+		"LocalShadow": false
+	}
+}

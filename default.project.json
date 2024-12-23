@@ -1,6 +1,9 @@
 {
 	"name": "FusionComponents",
 	"tree": {
-		"$path": "dist"
+		"$path": "dist",
+        "Packages": {
+            "$path": "packages"
+        }
 	}
 }
